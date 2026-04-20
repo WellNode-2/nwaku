@@ -58,11 +58,11 @@ docker compose up -d
 ## Перевірка
 
 ```/dev/null/check.sh#L1-8
-# Здоров'я ноди (зачекай ~30 сек після запуску)
-./chkhealth.sh
-
 # Живі логи
 docker compose logs logos-messaging-node -f --tail 50
+
+# Здоров'я ноди (зачекай ~30 сек після запуску)
+./chkhealth.sh
 ```
 
 ## Оновлення ноди (у майбутньому)
