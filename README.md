@@ -27,8 +27,9 @@ cp .env.example .env
 ```/dev/null/.env#L1-12
 # RPC для Linea Sepolia
 RLN_RELAY_ETH_CLIENT_ADDRESS=
-# Постійний ключ ноди (згенеруй один раз: openssl rand -hex 32)
+# Постійний ключ ноди не обовьязково (згенеруй один раз: openssl rand -hex 32)
 NODEKEY=
+# Встановити розмір сховища ./set_storage_retention.sh
 STORAGE_SIZE=50GB
 RLN_RELAY_CRED_PASSWORD=
 RLN_RELAY_CRED_PATH=/keystore/keystore.json
@@ -49,9 +50,6 @@ mkdir -p keystore
 ## Запуск ноди
 
 ```/dev/null/setup.sh#L1-4
-# Встановити розмір сховища
-./set_storage_retention.sh
-
 docker compose up -d
 ```
 
